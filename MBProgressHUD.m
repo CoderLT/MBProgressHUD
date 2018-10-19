@@ -79,7 +79,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 + (MBProgressHUD *)HUDForView:(UIView *)view {
     NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
     for (UIView *subview in subviewsEnum) {
-        if ([subview isKindOfClass:self]) {
+        if ([subview isKindOfClass:self] && !((MBProgressHUD *)subview).hasFinished) {
             return (MBProgressHUD *)subview;
         }
     }
