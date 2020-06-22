@@ -177,9 +177,9 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 - (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay {
     // Cancel any scheduled hideDelayed: calls
     [self.hideDelayTimer invalidate];
-    if (self.graceTimer) {
-        [self handleGraceTimer:self.graceTimer];
-    }
+//    if (self.graceTimer) {
+//        [self handleGraceTimer:self.graceTimer];
+//    }
     NSTimer *timer = [NSTimer timerWithTimeInterval:delay target:self selector:@selector(handleHideTimer:) userInfo:@(animated) repeats:NO];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.hideDelayTimer = timer;
