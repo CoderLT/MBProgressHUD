@@ -150,6 +150,8 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     }
     // ... otherwise show the HUD immediately
     else {
+        [self.graceTimer invalidate];
+        self.graceTimer = nil;
         [self showUsingAnimation:self.useAnimation];
     }
 }
