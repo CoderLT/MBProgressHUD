@@ -218,7 +218,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     [self.backgroundView.layer removeAllAnimations];
     
     // Cancel any scheduled hideDelayed: calls
-    [self.hideDelayTimer invalidate];
+//    [self.hideDelayTimer invalidate];
     
     self.showStarted = [NSDate date];
     self.alpha = 1.f;
